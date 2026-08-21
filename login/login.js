@@ -23,6 +23,7 @@ form.addEventListener('submit', (e) => {
 
    if(existingUser.password == password.value){
     alert('user logged in sucessfully')
+    localStorage.setItem('isLoggedIn', JSON.stringify(existingUser))
    } else{
     return alert('password incorecct')
    }
@@ -30,6 +31,6 @@ form.addEventListener('submit', (e) => {
    myLoader.style.display = 'block'
 
    setTimeout(() => {
-    window.location.href = '../home/home.html'
+    window.location.href = '../personalprofile/personalprofile.html'
    },3000)
 })
